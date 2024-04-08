@@ -31,7 +31,12 @@ picture = [rock, paper, scissors]
 user = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
 computer = random.randint(0, 2)
 
-print(f"Computer chose: \n {picture[computer]}\n You chose \n {picture[user]}")
+if user >= 3 or user < 0:
+    print(f"You typed invalid number {user}")
+else:
+    print(f"User chose \n {picture[user]}")
+    print(f"Computer chose: \n {picture[computer]}\n")
+
 if user == computer:
     print("Game draw")
 elif user == 0 and computer == 1:
@@ -46,3 +51,6 @@ elif user == 2 and computer == 0:
     print("You lose!")
 elif user == 2 and computer == 1:
     print("You win!")
+else:
+    print("You lose!")
+
