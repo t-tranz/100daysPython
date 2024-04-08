@@ -46,4 +46,3 @@ elif user == 2 and computer == 0:
     print("You lose!")
 elif user == 2 and computer == 1:
     print("You win!")
-
